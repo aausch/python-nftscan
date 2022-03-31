@@ -205,7 +205,7 @@ class NftScanAPI:
             self,
             erc: erc_valid(str),
             user_address: str,
-            page_index: non_negative(int)=0,
+            page_index: more_than_zero(int)=1,
             page_size: int=20,
             export_file_name: str="",
         ):
@@ -224,7 +224,6 @@ class NftScanAPI:
             endpoint = f"getAllNftByUserAddress"
             query_params = {
                 "erc": erc,
-                "walletType": 3,
                 "page_index": page_index,
                 "page_size": min(page_size, self.MAX_PAGE_SIZE), # TODO: validator?
                 "user_address": user_address
@@ -262,7 +261,7 @@ class NftScanAPI:
     @validate_parameters
     def getMintByUserAddress(
             self,
-            page_index: non_negative(int)=0,
+            page_index: more_than_zero(int)=1,
             page_size: non_negative(int)=20,
             user_address: non_blank(str)="",
             export_file_name: str="",
@@ -291,7 +290,7 @@ class NftScanAPI:
     def getMintByUserAddressAndNftAddress(
             self,
             nft_address: non_blank(str)="",
-            page_index: non_negative(int)=0,
+            page_index: more_than_zero(int)=1,
             page_size: non_negative(int)=20,
             user_address: non_blank(str)="",
             export_file_name: str="",
@@ -322,7 +321,7 @@ class NftScanAPI:
     def getNFTRecordByContract(
             self,
             nft_address: non_blank(str)="",
-            page_index: non_negative(int)=0,
+            page_index: more_than_zero(int)=1,
             page_size: non_negative(int)=20,
             export_file_name: str="",
         ):
@@ -350,7 +349,7 @@ class NftScanAPI:
     def getNftByContractAndUserAddress(
             self,
             nft_address: non_blank(str)="",
-            page_index: non_negative(int)=0,
+            page_index: more_than_zero(int)=1,
             page_size: non_negative(int)=20,
             user_address: non_blank(str)="",
             export_file_name: str="",
@@ -381,7 +380,7 @@ class NftScanAPI:
     def getRecordByUserAddressAndTokenId(
             self,
             nft_address: non_blank(str)="",
-            page_index: non_negative(int)=0,
+            page_index: more_than_zero(int)=1,
             page_size: non_negative(int)=20,
             token_id: non_blank(str)="",
             user_address: non_blank(str)="",
@@ -442,7 +441,7 @@ class NftScanAPI:
     def getSingleNftRecord(
             self,
             nft_address: non_blank(str)="",
-            page_index: non_negative(int)=0,
+            page_index: more_than_zero(int)=1,
             page_size: non_negative(int)=20,
             token_id: non_blank(str)="",
             export_file_name: str="",
@@ -498,7 +497,7 @@ class NftScanAPI:
     def getUserRecordByContract(
         self,
         nft_address: non_blank(str)="",
-        page_index: non_negative(int)=0,
+        page_index: more_than_zero(int)=1,
         page_size: non_negative(int)=20,
         user_address: non_blank(str)="",
         export_file_name: str="",
@@ -528,7 +527,7 @@ class NftScanAPI:
     @validate_parameters
     def getUserRecordByUserAddress(
         self,
-        page_index: non_negative(int)=0,
+        page_index: more_than_zero(int)=1,
         page_size: non_negative(int)=20,
         user_address: non_blank(str)="",
         export_file_name: str="",
