@@ -49,6 +49,6 @@ setup(
     project_urls={
         'Source': 'https://github.com/nftscan2022/nftscan-api-python-sdk',
     },
-    version='0.1.2',
+    version='0.1.3',
     zip_safe=False,
 )

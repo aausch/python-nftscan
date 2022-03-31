@@ -1,3 +1,7 @@
+## 0.1.3 (2022-03-31)
+
+Moved source repo to main NFTScan github org - https://github.com/nftscan2022/nftscan-api-python-sdk
+
 ## 0.1.2 (2022-03-31)
 
 Bugfixes:
