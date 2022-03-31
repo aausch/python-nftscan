@@ -1,4 +1,19 @@
 from datetime import datetime, timezone
+import json
+
+
+def force_encoded_json(content: str):
+    """Guarantees that content is a json, encoded string
+
+    Args:
+        content (str or bytes): Content to forced into json formatting. 
+    """
+    try:
+        json.loads(content)
+    except (TypeError, ValueError) as e:
+        # Try forcing the issue
+        return json.dumps(content).encode()
+    return content
 
 
 def export_file(content, file_name):

@@ -124,6 +124,7 @@ class NftScanAPI:
         status_code = json_response["code"]
         if not "data" in json_response.keys():
             raise Exception("Request failed, no data in JSON response")
+        
         data = json_response["data"]
 
         if status_code == 400:
@@ -139,7 +140,7 @@ class NftScanAPI:
             raise TimeoutError("The server reported a gateway time-out error.")
 
         if export_file_name != "":
-            utils.export_file(data, export_file_name)
+            utils.export_file(utils.force_encoded_json(data), export_file_name)
         if return_response:
             return response
         return data 

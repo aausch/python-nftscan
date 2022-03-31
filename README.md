@@ -23,3 +23,10 @@ test_wallet = "0x3becf83939f34311b6bee143197872d877501b11"
 
 print(nftScan.getGroupByNftContract(erc="erc721", user_address=test_wallet))
 ```
+
+Write json encoded response to a file:
+
+```
+nftScan.getGroupByNftContract(erc="erc721", user_address=test_wallet, export_file_name='out.txt'))
+
+```
