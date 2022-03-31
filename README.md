@@ -1,3 +1,5 @@
+**_Note - this library is now hosted at https://github.com/nftscan2022/nftscan-api-python-sdk
+_**
 # NFTScan NFT API Python 3 wrapper
 
 A library providing Python 3 bindings for the [NFTScan API](https://developer.nftscan.com/)
