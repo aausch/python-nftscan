@@ -2,7 +2,7 @@
 
 __author__ = """Alex Ausch"""
 __email__ = "hello@ausch.name"
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 __all__ = [#"Events", "Asset", "Assets", "Contract", "Collection",
            #"CollectionStats", "Collections", "Bundles", 
            "utils",
