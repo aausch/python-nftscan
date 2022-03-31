@@ -49,6 +49,6 @@ setup(
     project_urls={
         'Source': 'https://github.com/aausch/python-nftscan'
     },
-    version='0.1.0',
+    version='0.1.1',
     zip_safe=False,
 )
