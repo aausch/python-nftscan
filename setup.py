@@ -45,9 +45,9 @@ setup(
     packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/aausch/python-nftscan',
+    url='https://github.com/nftscan2022/nftscan-api-python-sdk',
     project_urls={
-        'Source': 'https://github.com/aausch/python-nftscan'
+        'Source': 'https://github.com/nftscan2022/nftscan-api-python-sdk',
     },
     version='0.1.2',
     zip_safe=False,
